@@ -36,7 +36,7 @@
     
     <style>
         .text-gradient {
-            background: linear-gradient(135deg, #7a6d5f 0%, #b99d6f 100%);
+            background: linear-gradient(135deg, #A8A094 0%, #D4B896 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -88,6 +88,7 @@
     .modal img:hover {
     transform: scale(1.02);
     }
+
     /* Menú móvil */
 #mobile-menu {
     position: absolute;
@@ -134,6 +135,7 @@
 }
 
     </style>
+    
 </head>
 <body class="bg-warm-white text-warm-gray font-inter">
     <!-- Navigation -->
@@ -159,8 +161,20 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
+        <!-- MENÚ MÓVIL (FALTABA COMPLETAMENTE) -->
+        <div id="mobile-menu" class="md:hidden">
+        <a href="index.html#inicio" class="block px-6 py-3 border-b border-warm-beige/50">Inicio</a>
+        <a href="index.html#sobre-mi" class="block px-6 py-3 border-b border-warm-beige/50">Sobre mí</a>
+        <a href="index.html#servicios" class="block px-6 py-3 border-b border-warm-beige/50">Servicios</a>
+        <a href="index.html#proceso" class="block px-6 py-3 border-b border-warm-beige/50">Proceso</a>
+        <a href="#portfolio" class="block px-6 py-3 border-b border-warm-beige/50">Portfolio</a>
+        <a href="index.html#contacto" class="block px-6 py-3">Contacto</a>
+    </div>
+
+        
     </div>
 </nav>
+
 
 
     <!-- Header -->
@@ -309,9 +323,9 @@
     <!-- CTA Section -->
     <section class="py-20 bg-warm-beige/20">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-light mb-6 text-gradient">¿Buscas un espacio que refleje tu estilo?</h2>
+            <h2 class="text-4xl font-light mb-6 text-gradient">¿Listo para transformar tu espacio?</h2>
             <p class="text-xl text-warm-stone mb-8">
-                Cada proyecto es único: diseñamos ambientes que combinan estilo y funcionalidad.
+                Cada proyecto es único. Trabajemos juntos para crear el espacio que siempre soñaste.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="window.location.href='index.html#contacto'" class="bg-gradient-to-r from-warm-stone to-warm-wood text-white px-8 py-4 rounded-full font-medium hover:shadow-lg transition-all">
@@ -325,49 +339,21 @@
     </section>
 
     <!-- Footer -->
-<footer class="bg-warm-gray text-warm-white py-12">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center">
-            <!-- FA Interiorismo con color igual al icono de Instagram -->
-            <div class="font-crimson text-2xl font-semibold mb-4 text-warm-white/60 hover:text-warm-white transition-colors">
-                FA Interiorismo
+    <footer class="bg-warm-gray text-warm-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <div class="font-crimson text-2xl font-semibold mb-4 text-gradient">
+                    FA Interiorismo
+                </div>
+                <p class="text-warm-white/80 mb-6">
+                    Espacios reales. Diseño funcional. Resultados que se viven.
+                </p>
+                <p class="text-warm-white/60 text-sm">
+                    © 2024 FA Interiorismo. Todos los derechos reservados.
+                </p>
             </div>
-            <p class="text-warm-white/80 mb-6">
-                Espacios reales. Diseño funcional. Resultados que se viven.
-            </p>
-            <!-- Redes Sociales: Instagram + Behance + LinkedIn -->
-<div class="flex justify-center space-x-8 mb-6">
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/feraymat.interiorismo/" target="_blank" class="text-warm-white/60 hover:text-warm-white transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" stroke-width="2"></rect>
-            <path d="M16 11.37a4 4 0 1 1-7.9 1.63 4 4 0 0 1 7.9-1.63z" stroke-width="2"></path>
-            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke-width="2"></line>
-        </svg>
-    </a>
-
-    <!-- Behance -->
-    <a href="https://www.behance.net/mariafguaitim" target="_blank" class="text-warm-white/60 hover:text-warm-white transition-colors">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4 7h5a3 3 0 010 6H4V7zm0 4h4a1 1 0 100-2H4v2zm0 2h5a3 3 0 010 6H4v-6zm0 4h4a1 1 0 100-2H4v2zM15.5 7c2.5 0 4.5 2 4.5 4.5S18 16 15.5 16 11 14 11 11.5 13 7 15.5 7zm0 2c-1.4 0-2.5 1.1-2.5 2.5S14.1 14 15.5 14s2.5-1.1 2.5-2.5S16.9 9 15.5 9zm3-3h-6V5h6v1z"/>
-        </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/maria-fernanda-guaitima-aymat-117231123/" target="_blank" class="text-warm-white/60 hover:text-warm-white transition-colors">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM.22 8h4.52v14H.22V8zM8.9 8h4.33v1.91h.06c.6-1.14 2.06-2.34 4.24-2.34 4.53 0 5.37 2.98 5.37 6.86V22h-4.52v-6.36c0-1.52-.03-3.48-2.12-3.48-2.12 0-2.44 1.66-2.44 3.37V22H8.9V8z"/>
-        </svg>
-    </a>
-
-</div>
-            <p class="text-warm-white/60 text-sm">
-                © 2025 FA Interiorismo. Todos los derechos reservados.
-            </p>
         </div>
-    </div>
-</footer> 
+    </footer>
 
     <!-- Modal de Imagen -->
     <div id="image-modal" class="modal">
@@ -410,6 +396,16 @@
                 closeModal();
             }
         });
-    </script>
+    </script> 
+    <script>
+const btn = document.getElementById("mobile-menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+});
+</script>
+
+    
 </body>
 </html>

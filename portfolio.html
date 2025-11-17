@@ -88,6 +88,50 @@
     .modal img:hover {
     transform: scale(1.02);
     }
+    /* Menú móvil */
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(245, 225, 195, 0.85); /* fondo semitransparente */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 40;
+}
+
+#mobile-menu.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #7a6d5f;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#mobile-menu a:hover {
+    color: #b99d6f;
+}
+
+/* Botón hamburguesa */
+#mobile-menu-btn {
+    background: rgba(245, 225, 195, 0.85);
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-btn:hover {
+    transform: scale(1.1);
+}
 
     </style>
 </head>
@@ -98,7 +142,8 @@
         <div class="font-crimson text-2xl font-semibold text-gradient">
             FA Interiorismo
         </div>
-        <!-- Menú Desktop -->
+
+        <!-- Menú desktop -->
         <div class="hidden md:flex space-x-8">
             <a href="#inicio" class="hover:text-warm-stone transition-colors">Inicio</a>
             <a href="#sobre-mi" class="hover:text-warm-stone transition-colors">Sobre mí</a>
@@ -107,7 +152,8 @@
             <a href="#portfolio" class="hover:text-warm-stone transition-colors">Portfolio</a>
             <a href="#contacto" class="hover:text-warm-stone transition-colors">Contacto</a>
         </div>
-        <!-- Botón menú móvil -->
+
+        <!-- Botón móvil -->
         <button class="md:hidden" id="mobile-menu-btn">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -115,6 +161,7 @@
         </button>
     </div>
 </nav>
+
 
     <!-- Header -->
     <section class="pt-32 pb-16 bg-warm-beige/20">

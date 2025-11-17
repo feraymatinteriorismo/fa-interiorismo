@@ -312,27 +312,24 @@ function initMobileMenu() {
             if (!mobileMenu) {
                 mobileMenu = document.createElement('div');
                 mobileMenu.id = 'mobile-menu';
-                mobileMenu.className = 'md:hidden bg-warm-white border-t border-warm-beige/50';
-                mobileMenu.innerHTML = `
-                    <div class="px-6 py-4 space-y-4">
-                        <a href="#inicio" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Inicio</a>
-                        <a href="#sobre-mi" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Sobre mí</a>
-                        <a href="#servicios" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Servicios</a>
-                        <a href="#proceso" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Proceso</a>
-                        <a href="#portfolio" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Portfolio</a>
-                        <a href="#contacto" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Contacto</a>
-                    </div>
-                `;
                 nav.appendChild(mobileMenu);
+
+                mobileMenu.innerHTML = `
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#proceso">Proceso</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contacto">Contacto</a>
+                `;
+
+                // Cerrar menú al hacer clic en un enlace
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+                });
             }
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('show');
         });
     }
-}
-
-// Función para cerrar menú al hacer click en un link
-function closeMobileMenu() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu) mobileMenu.classList.add('hidden');
 }
 

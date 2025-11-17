@@ -301,3 +301,38 @@ window.addEventListener('error', function(e) {
     console.error('Error capturado:', e.error);
     showNotification('Ha ocurrido un error. Por favor, intenta de nuevo.', 'error');
 });
+
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const nav = document.querySelector('nav');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            let mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu) {
+                mobileMenu = document.createElement('div');
+                mobileMenu.id = 'mobile-menu';
+                mobileMenu.className = 'md:hidden bg-warm-white border-t border-warm-beige/50';
+                mobileMenu.innerHTML = `
+                    <div class="px-6 py-4 space-y-4">
+                        <a href="#inicio" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Inicio</a>
+                        <a href="#sobre-mi" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Sobre mí</a>
+                        <a href="#servicios" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Servicios</a>
+                        <a href="#proceso" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Proceso</a>
+                        <a href="#portfolio" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Portfolio</a>
+                        <a href="#contacto" class="block hover:text-warm-stone transition-colors" onclick="closeMobileMenu()">Contacto</a>
+                    </div>
+                `;
+                nav.appendChild(mobileMenu);
+            }
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+}
+
+// Función para cerrar menú al hacer click en un link
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) mobileMenu.classList.add('hidden');
+}
+

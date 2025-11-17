@@ -182,6 +182,51 @@
     transform: scale(1.02);
 }
 
+/* Menú móvil */
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(245, 225, 195, 0.85); /* fondo semitransparente */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    z-index: 40;
+}
+
+#mobile-menu.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #7a6d5f;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#mobile-menu a:hover {
+    color: #b99d6f;
+}
+
+/* Botón hamburguesa */
+#mobile-menu-btn {
+    background: rgba(245, 225, 195, 0.85);
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-btn:hover {
+    transform: scale(1.1);
+}
+        
     </style>
 </head>
 <body class="bg-warm-white text-warm-gray font-inter">
